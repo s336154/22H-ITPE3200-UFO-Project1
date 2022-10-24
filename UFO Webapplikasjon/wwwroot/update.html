@@ -6,38 +6,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/update.js"></script>
+    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
         <h1>Update an observation</h1>
         <form class="form">
-            <input type="hidden" id="id" />
             <div class="form-group">
-                <label>City</label>
-                <input type="text" id="city" />
+                <h4>City</h4>
+                <input style="width:300px; height:40px" class="form-control" type="text" id="city" placeholder="City" />
             </div>
             <div class="form-group">
-                <label>Country</label>
-                <input type="text" id="country" />
+                <h4>Country</h4>
+                <input style="width:300px; height:40px" class="form-control" type="text" id="country" placeholder="Country" />
             </div>
             <div class="form-group">
-                <label>Duration</label>
-                <input type="text" id="duration" />
+                <h4>Duration</h4>
+                <input style="width:300px; height:40px" class="form-control" type="text" id="durationNumber" placeholder="Duration" />
+                <select style="width:130px; height:50px" id="durationUnit">
+                    <option>Select</option>
+                    <option value=" seconds">Seconds</option>
+                    <option value=" minutes">Minutes</option>
+                    <option value=" hours">Hours</option>
+                    <option value=" days">Days</option>
+                </select>
             </div>
             <div class="form-group">
-                <label>Date Posted</label>
-                <input type="text" id="dateposted" />
+                <h4>Date Posted</h4>
+                <input style="width:300px; height:40px" class="form-control" type="text" id="dateposted" placeholder="Date Posted" />
             </div>
             <div class="form-group">
-                <label>Date/Time:</label>
-                <input type="text" id="datetime" />
+                <h4>Date Time: When did this happen?</h4>
+                <input style="width:300px; height:40px" class="form-control" type="text" id="datetime" placeholder="Date Time" />
             </div>
             <div class="form-group">
-                <label>Comments</label>
-                <textarea type="text" id="comments"></textarea>
+                <h4>Comments</h4>
+                <textarea style="width:600px; height:100px" class="form-control" type="text" id="comments" placeholder="Write a comment .."></textarea>
             </div>
             <div class="form-group">
-                <input type="button" id="reg" value="Update" class="btn btn-primary" onclick="updateSighting()" />
+                <input type="button" id="reg" value="Update" class="btn btn-success" onclick="updateSighting()" />
             </div>
             <div id="err" style="color: red"></div>
         </form>

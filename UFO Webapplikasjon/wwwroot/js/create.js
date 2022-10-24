@@ -1,4 +1,4 @@
-﻿function updateSighting() {
+﻿function createSighting() {
     // Henter nåværende dato for når lagringsknappen trykkes
     let date = new Date();
     // Formaterer datoen til mm/dd/yyyy
@@ -20,7 +20,7 @@
     const url = "Sighting/Create";
     $.post(url, report, function (OK) {
         if (OK) {
-            window.location.href = 'index.html';
+            window.location.href = './index.html';
         }
         else {
             $("#err").html("Error - Try again later");
